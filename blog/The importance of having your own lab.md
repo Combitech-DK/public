@@ -24,4 +24,5 @@ environment with automated detonaton of malware. Your imagination is the only li
 If you want to take a few shortcuts in the building of your lab you can always look for open source alternatives, there is quite a large number of projects out there where you can simply download some Docker images and get going.
 
 [[HELK]](https://github.com/Cyb3rWard0g/HELK) - The Hunting ELK or simply the HELK
+
 [[Security Onion]](https://github.com/Security-Onion-Solutions/securityonion) - Security Onion is a free and open Linux distribution for threat hunting, enterprise security monitoring, and log management.
