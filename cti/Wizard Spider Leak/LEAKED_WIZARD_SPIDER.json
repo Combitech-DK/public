@@ -1,0 +1,556 @@
+{
+	"name": "LEAKED WIZARD SPIDER",
+	"versions": {
+		"attack": "9",
+		"navigator": "4.3",
+		"layer": "4.2"
+	},
+	"domain": "enterprise-attack",
+	"description": "",
+	"filters": {
+		"platforms": [
+			"Linux",
+			"macOS",
+			"Windows",
+			"Azure AD",
+			"Office 365",
+			"SaaS",
+			"IaaS",
+			"Google Workspace",
+			"PRE",
+			"Network",
+			"Containers"
+		]
+	},
+	"sorting": 0,
+	"layout": {
+		"layout": "side",
+		"aggregateFunction": "average",
+		"showID": false,
+		"showName": true,
+		"showAggregateScores": false,
+		"countUnscored": false
+	},
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1134",
+			"tactic": "defense-evasion",
+			"color": "#e60d0d",
+			"comment": "They start the svc.exe process and create a new process with the access token duplicated from the parent process.",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1134",
+			"tactic": "privilege-escalation",
+			"color": "#e60d0d",
+			"comment": "They start the svc.exe process and create a new process with the access token duplicated from the parent process.",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1134.003",
+			"tactic": "defense-evasion",
+			"color": "#e60d0d",
+			"comment": "They start the svc.exe process and create a new process with the access token duplicated from the parent process.",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1134.003",
+			"tactic": "privilege-escalation",
+			"color": "#e60d0d",
+			"comment": "They start the svc.exe process and create a new process with the access token duplicated from the parent process.",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1087",
+			"tactic": "discovery",
+			"color": "#e60d0d",
+			"comment": "Using AD-find (https://raw.githubusercontent.com/ForbiddenProgrammer/conti-pentester-guide-leak/main/MANUALS/%D1%85%D0%B0%D0%BD%D1%82%D0%B8%D0%BD%D0%B3%20%D0%B0%D0%B4%D0%BC%D0%B8%D0%BD%D0%BE%D0%B2%2C%20%D0%BF%D1%80%D0%BE%D1%88%D1%83%20%D0%BE%D0%B7%D0%BD%D0%B0%D0%BA%D0%BE%D0%BC%D0%B8%D1%82%D1%8C%D1%81%D1%8F%2C%20%D0%BE%D1%87%D0%B5%D0%BD%D1%8C%20%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D0%BE!!.txt)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1087.001",
+			"tactic": "discovery",
+			"color": "#e60d0d",
+			"comment": "There's documentation describing how to enumerate SAM to look for local accounts",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1087.002",
+			"tactic": "discovery",
+			"color": "#e60d0d",
+			"comment": "Using AD-find (https://raw.githubusercontent.com/ForbiddenProgrammer/conti-pentester-guide-leak/main/MANUALS/%D1%85%D0%B0%D0%BD%D1%82%D0%B8%D0%BD%D0%B3%20%D0%B0%D0%B4%D0%BC%D0%B8%D0%BD%D0%BE%D0%B2%2C%20%D0%BF%D1%80%D0%BE%D1%88%D1%83%20%D0%BE%D0%B7%D0%BD%D0%B0%D0%BA%D0%BE%D0%BC%D0%B8%D1%82%D1%8C%D1%81%D1%8F%2C%20%D0%BE%D1%87%D0%B5%D0%BD%D1%8C%20%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D0%BE!!.txt)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1583",
+			"tactic": "resource-development",
+			"color": "#e60d0d",
+			"comment": "install the Metasploit pen-testing framework on a virtual private server (VPS)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1583.003",
+			"tactic": "resource-development",
+			"color": "#e60d0d",
+			"comment": "install the Metasploit pen-testing framework on a virtual private server (VPS)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1071",
+			"tactic": "command-and-control",
+			"color": "#e60d0d",
+			"comment": "connect to hacked networks via RDP using a Ngrok secure tunnel",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1071.001",
+			"tactic": "command-and-control",
+			"color": "#e60d0d",
+			"comment": "connect to hacked networks via RDP using a Ngrok secure tunnel (NGROK USES HTTPS)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1110",
+			"tactic": "credential-access",
+			"color": "#e60d0d",
+			"comment": "brute-force routers, NAS devices, and security cameras\nperform SMB brute-force attacks",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1110.001",
+			"tactic": "credential-access",
+			"color": "#e60d0d",
+			"comment": "brute-force routers, NAS devices, and security cameras\nperform SMB brute-force attacks\n",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1110.002",
+			"tactic": "credential-access",
+			"color": "#e60d0d",
+			"comment": "brute-force routers, NAS devices, and security cameras\nperform SMB brute-force attacks\n",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1110.003",
+			"tactic": "credential-access",
+			"color": "#e60d0d",
+			"comment": "brute-force routers, NAS devices, and security cameras\nperform SMB brute-force attacks",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1110.004",
+			"tactic": "credential-access",
+			"color": "#e60d0d",
+			"comment": "brute-force routers, NAS devices, and security cameras\nperform SMB brute-force attacks",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1486",
+			"tactic": "impact",
+			"color": "#e60d0d",
+			"comment": "They describe how to deploy their encryption on systems in the leak",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1005",
+			"tactic": "collection",
+			"color": "#e60d0d",
+			"comment": "They enumerate and collect data from a local SQL database",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1048",
+			"tactic": "exfiltration",
+			"color": "#e60d0d",
+			"comment": "They create a soks5 proxy over the TOR network and exfiltrate data via FileZilla",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1048.003",
+			"tactic": "exfiltration",
+			"color": "#e60d0d",
+			"comment": "They create a soks5 proxy over the TOR network and exfiltrate data via FileZilla",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1210",
+			"tactic": "lateral-movement",
+			"color": "#e60d0d",
+			"comment": "use the ZeroLogon exploit",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1133",
+			"tactic": "persistence",
+			"color": "#e60d0d",
+			"comment": "configure the Rclone software with a MEGA account for data exfiltration",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1133",
+			"tactic": "initial-access",
+			"color": "#e60d0d",
+			"comment": "configure the Rclone software with a MEGA account for data exfiltration",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1562",
+			"tactic": "defense-evasion",
+			"color": "#e60d0d",
+			"comment": "disable Windows Defender protections",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1562.004",
+			"tactic": "defense-evasion",
+			"color": "#e60d0d",
+			"comment": "disable Windows Defender protections\n\nDoes so by stopping the msmpeng.exe process and deleting associated files (https://raw.githubusercontent.com/ForbiddenProgrammer/conti-pentester-guide-leak/main/MANUALS/%D0%BF%D0%BE%20%D0%BE%D1%82%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D1%8E%20%D0%B4%D0%B5%D1%84%D0%B5%D0%BD%D0%B4%D0%B5%D1%80%D0%B0.txt)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1490",
+			"tactic": "impact",
+			"color": "#e60d0d",
+			"comment": "delete shadow volume copies",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1112",
+			"tactic": "defense-evasion",
+			"color": "#e60d0d",
+			"comment": "Modifying the RDP port to 1530 via the registry",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1046",
+			"tactic": "discovery",
+			"color": "#e60d0d",
+			"comment": "use the NetScan tool to scan internal networks",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1571",
+			"tactic": "command-and-control",
+			"color": "#e60d0d",
+			"comment": "Changing the RDP port to 1350",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1003",
+			"tactic": "credential-access",
+			"color": "#e60d0d",
+			"comment": "dump passwords from Active Directories (NTDS dumping)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1003.001",
+			"tactic": "credential-access",
+			"color": "#e60d0d",
+			"comment": "Dumps LSASS",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1003.002",
+			"tactic": "credential-access",
+			"color": "#e60d0d",
+			"comment": "There's documentation describing how to dump credentials through SAM",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1003.003",
+			"tactic": "credential-access",
+			"color": "#e60d0d",
+			"comment": "dump passwords from Active Directories (NTDS dumping)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1588",
+			"tactic": "resource-development",
+			"color": "#e60d0d",
+			"comment": "downloading and installing Armitage (https://github.com/ForbiddenProgrammer/conti-pentester-guide-leak/blob/main/MANUALS/%D1%8D%D1%82%D0%BE%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0%20%D0%B0%D1%80%D0%BC%D0%B8%D1%82%D0%B0%D0%B6%D0%B0.%20%D1%81%D1%82%D0%B0%D0%B2%D0%B8%D1%82%D1%81%D1%8F%20%D0%BF%D0%BE%D0%B2%D0%B5%D1%80%D1%85%20Metasploit)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1588.002",
+			"tactic": "resource-development",
+			"color": "#e60d0d",
+			"comment": "downloading and installing Armitage (https://github.com/ForbiddenProgrammer/conti-pentester-guide-leak/blob/main/MANUALS/%D1%8D%D1%82%D0%BE%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0%20%D0%B0%D1%80%D0%BC%D0%B8%D1%82%D0%B0%D0%B6%D0%B0.%20%D1%81%D1%82%D0%B0%D0%B2%D0%B8%D1%82%D1%81%D1%8F%20%D0%BF%D0%BE%D0%B2%D0%B5%D1%80%D1%85%20Metasploit)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1055",
+			"tactic": "defense-evasion",
+			"color": "#e60d0d",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1055",
+			"tactic": "privilege-escalation",
+			"color": "#e60d0d",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1219",
+			"tactic": "command-and-control",
+			"color": "#e60d0d",
+			"comment": "Using Anydesk for remote access",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1018",
+			"tactic": "discovery",
+			"color": "#e60d0d",
+			"comment": "They do a ping scan on known hostnames in the environment",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "execution",
+			"color": "#e60d0d",
+			"comment": "They use scheduled task to create an interactive shell with the compromised host",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "persistence",
+			"color": "#e60d0d",
+			"comment": "They use scheduled task to create an interactive shell with the compromised host",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "privilege-escalation",
+			"color": "#e60d0d",
+			"comment": "They use scheduled task to create an interactive shell with the compromised host",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1053.005",
+			"tactic": "execution",
+			"color": "#e60d0d",
+			"comment": "They use scheduled task to create an interactive shell with the compromised host",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1053.005",
+			"tactic": "persistence",
+			"color": "#e60d0d",
+			"comment": "They use scheduled task to create an interactive shell with the compromised host",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1053.005",
+			"tactic": "privilege-escalation",
+			"color": "#e60d0d",
+			"comment": "They use scheduled task to create an interactive shell with the compromised host",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1558",
+			"tactic": "credential-access",
+			"color": "#e60d0d",
+			"comment": "perform a Kerberoasting attack",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1558.003",
+			"tactic": "credential-access",
+			"color": "#e60d0d",
+			"comment": "perform a Kerberoasting attack",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1537",
+			"tactic": "exfiltration",
+			"color": "#e60d0d",
+			"comment": "configure the Rclone software with a MEGA account for data exfiltration",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "defense-evasion",
+			"color": "#e60d0d",
+			"comment": "elevate and gain admin rights inside a company’s hacked network",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "persistence",
+			"color": "#e60d0d",
+			"comment": "elevate and gain admin rights inside a company’s hacked network",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "privilege-escalation",
+			"color": "#e60d0d",
+			"comment": "elevate and gain admin rights inside a company’s hacked network",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "initial-access",
+			"color": "#e60d0d",
+			"comment": "elevate and gain admin rights inside a company’s hacked network",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.003",
+			"tactic": "defense-evasion",
+			"color": "#e60d0d",
+			"comment": "elevate and gain admin rights inside a company’s hacked network",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.003",
+			"tactic": "persistence",
+			"color": "#e60d0d",
+			"comment": "elevate and gain admin rights inside a company’s hacked network",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.003",
+			"tactic": "privilege-escalation",
+			"color": "#e60d0d",
+			"comment": "elevate and gain admin rights inside a company’s hacked network",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.003",
+			"tactic": "initial-access",
+			"color": "#e60d0d",
+			"comment": "elevate and gain admin rights inside a company’s hacked network",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ff6666",
+			"#ffe766",
+			"#8ec843"
+		],
+		"minValue": 0,
+		"maxValue": 100
+	},
+	"legendItems": [],
+	"metadata": [],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true,
+	"selectSubtechniquesWithParent": false
+}
