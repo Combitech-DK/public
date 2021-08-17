@@ -1,1 +1,1 @@
-
+This is a MITRE ATT&CK mapping based on the Wizard Spider leak (https://github.com/ForbiddenProgrammer/conti-pentester-guide-leak, https://therecord.media/disgruntled-ransomware-affiliate-leaks-the-conti-gangs-technical-manuals/)
