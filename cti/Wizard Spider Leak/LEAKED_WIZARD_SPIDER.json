@@ -181,7 +181,7 @@
 			"techniqueID": "T1486",
 			"tactic": "impact",
 			"color": "#e60d0d",
-			"comment": "They describe how to deploy their encryption on systems in the leak",
+			"comment": "They describe how to deploy their encryption on systems in the leak.\nThey are also encrypting ESXI hosts where applicable.",
 			"enabled": true,
 			"metadata": [],
 			"showSubtechniques": false
@@ -355,7 +355,7 @@
 			"comment": "",
 			"enabled": true,
 			"metadata": [],
-			"showSubtechniques": false
+			"showSubtechniques": true
 		},
 		{
 			"techniqueID": "T1055",
@@ -364,7 +364,7 @@
 			"comment": "",
 			"enabled": true,
 			"metadata": [],
-			"showSubtechniques": false
+			"showSubtechniques": true
 		},
 		{
 			"techniqueID": "T1219",
@@ -533,6 +533,69 @@
 			"tactic": "initial-access",
 			"color": "#e60d0d",
 			"comment": "elevate and gain admin rights inside a company’s hacked network",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1560",
+			"tactic": "collection",
+			"color": "#e60d0d",
+			"comment": "They archive collected NTDS dumps and password protect it.",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1560.001",
+			"tactic": "collection",
+			"color": "#e60d0d",
+			"comment": "They archive collected NTDS dumps and password protect it.",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1567",
+			"tactic": "exfiltration",
+			"color": "#e60d0d",
+			"comment": "configure the Rclone software with a MEGA account for data exfiltration",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1567.002",
+			"tactic": "exfiltration",
+			"color": "#e60d0d",
+			"comment": "configure the Rclone software with a MEGA account for data exfiltration",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1562.001",
+			"tactic": "defense-evasion",
+			"color": "#e60d0d",
+			"comment": "disable Windows Defender protections\n\nDoes so by stopping the msmpeng.exe process and deleting associated files (https://raw.githubusercontent.com/ForbiddenProgrammer/conti-pentester-guide-leak/main/MANUALS/%D0%BF%D0%BE%20%D0%BE%D1%82%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D1%8E%20%D0%B4%D0%B5%D1%84%D0%B5%D0%BD%D0%B4%D0%B5%D1%80%D0%B0.txt)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1055.001",
+			"tactic": "defense-evasion",
+			"color": "#e60d0d",
+			"comment": "They are using a part of Powertools (https://github.com/PowerShellEmpire/PowerTools/tree/master/PowerPick) called reflective DLL injection.",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1055.001",
+			"tactic": "privilege-escalation",
+			"color": "#e60d0d",
+			"comment": "They are using a part of Powertools (https://github.com/PowerShellEmpire/PowerTools/tree/master/PowerPick) called reflective DLL injection.",
 			"enabled": true,
 			"metadata": [],
 			"showSubtechniques": false
