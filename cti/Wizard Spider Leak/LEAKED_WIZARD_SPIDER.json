@@ -40,7 +40,7 @@
 			"comment": "They start the svc.exe process and create a new process with the access token duplicated from the parent process.",
 			"enabled": true,
 			"metadata": [],
-			"showSubtechniques": false
+			"showSubtechniques": true
 		},
 		{
 			"techniqueID": "T1134",
@@ -223,24 +223,6 @@
 			"showSubtechniques": false
 		},
 		{
-			"techniqueID": "T1133",
-			"tactic": "persistence",
-			"color": "#e60d0d",
-			"comment": "configure the Rclone software with a MEGA account for data exfiltration",
-			"enabled": true,
-			"metadata": [],
-			"showSubtechniques": false
-		},
-		{
-			"techniqueID": "T1133",
-			"tactic": "initial-access",
-			"color": "#e60d0d",
-			"comment": "configure the Rclone software with a MEGA account for data exfiltration",
-			"enabled": true,
-			"metadata": [],
-			"showSubtechniques": false
-		},
-		{
 			"techniqueID": "T1562",
 			"tactic": "defense-evasion",
 			"color": "#e60d0d",
@@ -280,7 +262,7 @@
 			"techniqueID": "T1046",
 			"tactic": "discovery",
 			"color": "#e60d0d",
-			"comment": "use the NetScan tool to scan internal networks",
+			"comment": "The group uses various tools to scan the infected network such as NetScan, Advanced Port Scanner and Angry IP Scanner (https://thedfirreport.com/2021/05/12/conti-ransomware/, https://github.com/ForbiddenProgrammer/conti-pentester-guide-leak/blob/main/MANUALS/NetScan.txt)",
 			"enabled": true,
 			"metadata": [],
 			"showSubtechniques": false
@@ -298,7 +280,7 @@
 			"techniqueID": "T1003",
 			"tactic": "credential-access",
 			"color": "#e60d0d",
-			"comment": "dump passwords from Active Directories (NTDS dumping)",
+			"comment": "dump passwords from Active Directories (NTDS dumping)\nUsing mimikatz to extract passwords from LSASS\nUsing pass-the-hash and related tactics",
 			"enabled": true,
 			"metadata": [],
 			"showSubtechniques": true
@@ -409,7 +391,7 @@
 			"comment": "They use scheduled task to create an interactive shell with the compromised host",
 			"enabled": true,
 			"metadata": [],
-			"showSubtechniques": false
+			"showSubtechniques": true
 		},
 		{
 			"techniqueID": "T1053.005",
@@ -469,7 +451,7 @@
 			"techniqueID": "T1078",
 			"tactic": "defense-evasion",
 			"color": "#e60d0d",
-			"comment": "elevate and gain admin rights inside a company’s hacked network",
+			"comment": "",
 			"enabled": true,
 			"metadata": [],
 			"showSubtechniques": false
@@ -478,7 +460,7 @@
 			"techniqueID": "T1078",
 			"tactic": "persistence",
 			"color": "#e60d0d",
-			"comment": "elevate and gain admin rights inside a company’s hacked network",
+			"comment": "",
 			"enabled": true,
 			"metadata": [],
 			"showSubtechniques": false
@@ -487,7 +469,7 @@
 			"techniqueID": "T1078",
 			"tactic": "privilege-escalation",
 			"color": "#e60d0d",
-			"comment": "elevate and gain admin rights inside a company’s hacked network",
+			"comment": "",
 			"enabled": true,
 			"metadata": [],
 			"showSubtechniques": true
@@ -496,46 +478,10 @@
 			"techniqueID": "T1078",
 			"tactic": "initial-access",
 			"color": "#e60d0d",
-			"comment": "elevate and gain admin rights inside a company’s hacked network",
+			"comment": "",
 			"enabled": true,
 			"metadata": [],
-			"showSubtechniques": false
-		},
-		{
-			"techniqueID": "T1078.003",
-			"tactic": "defense-evasion",
-			"color": "#e60d0d",
-			"comment": "elevate and gain admin rights inside a company’s hacked network",
-			"enabled": true,
-			"metadata": [],
-			"showSubtechniques": false
-		},
-		{
-			"techniqueID": "T1078.003",
-			"tactic": "persistence",
-			"color": "#e60d0d",
-			"comment": "elevate and gain admin rights inside a company’s hacked network",
-			"enabled": true,
-			"metadata": [],
-			"showSubtechniques": false
-		},
-		{
-			"techniqueID": "T1078.003",
-			"tactic": "privilege-escalation",
-			"color": "#e60d0d",
-			"comment": "elevate and gain admin rights inside a company’s hacked network",
-			"enabled": true,
-			"metadata": [],
-			"showSubtechniques": false
-		},
-		{
-			"techniqueID": "T1078.003",
-			"tactic": "initial-access",
-			"color": "#e60d0d",
-			"comment": "elevate and gain admin rights inside a company’s hacked network",
-			"enabled": true,
-			"metadata": [],
-			"showSubtechniques": false
+			"showSubtechniques": true
 		},
 		{
 			"techniqueID": "T1560",
@@ -596,6 +542,132 @@
 			"tactic": "privilege-escalation",
 			"color": "#e60d0d",
 			"comment": "They are using a part of Powertools (https://github.com/PowerShellEmpire/PowerTools/tree/master/PowerPick) called reflective DLL injection.",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1136",
+			"tactic": "persistence",
+			"color": "#e60d0d",
+			"comment": "According to the report (https://thedfirreport.com/2021/05/12/conti-ransomware/) the gang creates a new user called \"nuuser\" on the infected system.",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1136.002",
+			"tactic": "persistence",
+			"color": "#e60d0d",
+			"comment": "According to the report (https://thedfirreport.com/2021/05/12/conti-ransomware/) the gang creates a new user called \"nuuser\" on the infected system.",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1555",
+			"tactic": "credential-access",
+			"color": "#e60d0d",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1555.003",
+			"tactic": "credential-access",
+			"color": "#e60d0d",
+			"comment": "In the leaked documentation it is shown how the gang traverse through the history and cached passwords in the infected systems browsers.",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1068",
+			"tactic": "privilege-escalation",
+			"color": "#e60d0d",
+			"comment": "The group gained privileges using the inbuilt cobalt strike named pipe impersonation functionality, aka GetSystem (https://thedfirreport.com/2021/05/12/conti-ransomware/)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1570",
+			"tactic": "lateral-movement",
+			"color": "#e60d0d",
+			"comment": "Cobalt Strike beacons discovered on systems suggest that it was used to move\nlaterally within the environment prior to executing the Conti ransomware payload (https://www.ncsc.gov.ie/pdfs/HSE_Conti_140521_UPDATE.pdf)",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1566",
+			"tactic": "initial-access",
+			"color": "#e60d0d",
+			"comment": "According to the report (https://thedfirreport.com/2021/05/12/conti-ransomware/ ) the group uses phishing and spear phishing attacks to gain initial access to target companies.",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1566.001",
+			"tactic": "initial-access",
+			"color": "#e60d0d",
+			"comment": "According to the report (https://thedfirreport.com/2021/05/12/conti-ransomware/ ) the group uses phishing and spear phishing attacks to gain initial access to target companies.",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1204",
+			"tactic": "execution",
+			"color": "#e60d0d",
+			"comment": "According to a DFIR report (https://thedfirreport.com/2021/05/12/conti-ransomware/) the gang uses malicious javascript files to gain initial access in the target companies.\nThe malicious javascript dumped a file called \"IcedID\" which is a malicious DLL file which is then executed using rundll32.exe",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1204.002",
+			"tactic": "execution",
+			"color": "#e60d0d",
+			"comment": "According to a DFIR report (https://thedfirreport.com/2021/05/12/conti-ransomware/) the gang uses malicious javascript files to gain initial access in the target companies.\nThe malicious javascript dumped a file called \"IcedID\" which is a malicious DLL file which is then executed using rundll32.exe",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.002",
+			"tactic": "defense-evasion",
+			"color": "#e60d0d",
+			"comment": "According to the report (https://thedfirreport.com/2021/05/12/conti-ransomware/) the gang creates a new user called \"nuuser\" which was then added to a built-in Admin Domain group, granting admin privileges.",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.002",
+			"tactic": "persistence",
+			"color": "#e60d0d",
+			"comment": "According to the report (https://thedfirreport.com/2021/05/12/conti-ransomware/) the gang creates a new user called \"nuuser\" which was then added to a built-in Admin Domain group, granting admin privileges.",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.002",
+			"tactic": "privilege-escalation",
+			"color": "#e60d0d",
+			"comment": "According to the report (https://thedfirreport.com/2021/05/12/conti-ransomware/) the gang creates a new user called \"nuuser\" which was then added to a built-in Admin Domain group, granting admin privileges.",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.002",
+			"tactic": "initial-access",
+			"color": "#e60d0d",
+			"comment": "According to the report (https://thedfirreport.com/2021/05/12/conti-ransomware/) the gang creates a new user called \"nuuser\" which was then added to a built-in Admin Domain group, granting admin privileges.",
 			"enabled": true,
 			"metadata": [],
 			"showSubtechniques": false
