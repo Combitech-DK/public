@@ -382,7 +382,7 @@
 			"comment": "They use scheduled task to create an interactive shell with the compromised host",
 			"enabled": true,
 			"metadata": [],
-			"showSubtechniques": false
+			"showSubtechniques": true
 		},
 		{
 			"techniqueID": "T1053",
@@ -454,7 +454,7 @@
 			"comment": "",
 			"enabled": true,
 			"metadata": [],
-			"showSubtechniques": false
+			"showSubtechniques": true
 		},
 		{
 			"techniqueID": "T1078",
@@ -463,7 +463,7 @@
 			"comment": "",
 			"enabled": true,
 			"metadata": [],
-			"showSubtechniques": false
+			"showSubtechniques": true
 		},
 		{
 			"techniqueID": "T1078",
@@ -496,7 +496,7 @@
 			"techniqueID": "T1560.001",
 			"tactic": "collection",
 			"color": "#e60d0d",
-			"comment": "They archive collected NTDS dumps and password protect it.",
+			"comment": "They archive collected NTDS dumps and password protect it in a 7zip archive.",
 			"enabled": true,
 			"metadata": [],
 			"showSubtechniques": false
@@ -553,7 +553,7 @@
 			"comment": "According to the report (https://thedfirreport.com/2021/05/12/conti-ransomware/) the gang creates a new user called \"nuuser\" on the infected system.",
 			"enabled": true,
 			"metadata": [],
-			"showSubtechniques": false
+			"showSubtechniques": true
 		},
 		{
 			"techniqueID": "T1136.002",
@@ -668,6 +668,177 @@
 			"tactic": "initial-access",
 			"color": "#e60d0d",
 			"comment": "According to the report (https://thedfirreport.com/2021/05/12/conti-ransomware/) the gang creates a new user called \"nuuser\" which was then added to a built-in Admin Domain group, granting admin privileges.",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1132",
+			"tactic": "command-and-control",
+			"color": "#e60d0d",
+			"comment": "Host information is transmitted between IcedID Client and IcedID Server using XOR via a shifting key algorithm.",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1132.002",
+			"tactic": "command-and-control",
+			"color": "#e60d0d",
+			"comment": "Host information is transmitted between IcedID Client and IcedID Server using XOR via a shifting key algorithm.",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1484",
+			"tactic": "defense-evasion",
+			"color": "#e60d0d",
+			"comment": "Disable Windows Defender Via a Group Policy Modification, historically done on an existing GPO.",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1484",
+			"tactic": "privilege-escalation",
+			"color": "#e60d0d",
+			"comment": "Disable Windows Defender Via a Group Policy Modification, historically done on an existing GPO.",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1484.001",
+			"tactic": "defense-evasion",
+			"color": "#e60d0d",
+			"comment": "Disable Windows Defender Via a Group Policy Modification, historically done on an existing GPO.",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1484.001",
+			"tactic": "privilege-escalation",
+			"color": "#e60d0d",
+			"comment": "Disable Windows Defender Via a Group Policy Modification, historically done on an existing GPO.",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1482",
+			"tactic": "discovery",
+			"color": "#e60d0d",
+			"comment": "Utilizing Cobalt Strike “nltest /domain_trusts” have been used during previous engagements performed by Wizard Spider. ",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1105",
+			"tactic": "command-and-control",
+			"color": "#e60d0d",
+			"comment": "Wizard Spider has recently been seen utilizing Cobalt Strike Beacons shared over Network Shares and deployed with PsExec. ",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1135",
+			"tactic": "discovery",
+			"color": "#e60d0d",
+			"comment": "Utilizing ShareFinder in powershell through Invoke-ShareFinder is indicated in the Conti Manuals Leak from Wizard Spider. ",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1027",
+			"tactic": "defense-evasion",
+			"color": "#e60d0d",
+			"comment": "Using 7zip, pack NTDS shadow volumes into password protected zip files, thwarting detection.",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1027.002",
+			"tactic": "defense-evasion",
+			"color": "#e60d0d",
+			"comment": "Using 7zip, pack NTDS shadow volumes into password protected zip files, thwarting detection.",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1055.012",
+			"tactic": "defense-evasion",
+			"color": "#e60d0d",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1055.012",
+			"tactic": "privilege-escalation",
+			"color": "#e60d0d",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1090",
+			"tactic": "command-and-control",
+			"color": "#e60d0d",
+			"comment": "When Wizard Spider connected with Remote Access Software, they utilized IcedID process on the beachhead host to proxy traffic.",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1090.001",
+			"tactic": "command-and-control",
+			"color": "#e60d0d",
+			"comment": "When Wizard Spider connected with Remote Access Software, they utilized IcedID process on the beachhead host to proxy traffic.",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1558.001",
+			"tactic": "credential-access",
+			"color": "#e60d0d",
+			"comment": "Using Mimikatz, Wizard Spider has historically acquired valid Kerberos Gold/Silver tickets. ",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1558.002",
+			"tactic": "credential-access",
+			"color": "#e60d0d",
+			"comment": "Using Mimikatz, Wizard Spider has historically acquired valid Kerberos Gold/Silver tickets. ",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1082",
+			"tactic": "discovery",
+			"color": "#e60d0d",
+			"comment": "Wizard Spider has, using IcedID, retrieved information about the beachhead system. ",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1080",
+			"tactic": "lateral-movement",
+			"color": "#e60d0d",
+			"comment": "Copies of Cobalt Strike DLL have been distributed via existing network shares in the environments. ",
 			"enabled": true,
 			"metadata": [],
 			"showSubtechniques": false
